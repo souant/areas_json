@@ -262,12 +262,7 @@ async function crawlerArea() {
 
     
   })
-
-  
-
-
   console.log()
-
 }
 
 
