@@ -225,7 +225,9 @@ async function crawlerArea() {
         childrenNum: item.properties.childrenNum
       }
     })
-    item.children = curCitys
+    if(item.childrenNum !== 0) {
+      item.children = curCitys
+    }
     curCitys.forEach(async (item, index) => {
       console.log('-----------------------下载市------------------------')
       await setDelay(1000)
@@ -241,7 +243,9 @@ async function crawlerArea() {
           childrenNum: item.properties.childrenNum
         }
       })
-      item.children = curDistricts
+      if(item.childrenNum !== 0) {
+        item.children = curDistricts
+      }
       curDistricts.forEach(async (item, index) => {
         console.log('-----------------------下载县------------------------')
         await setDelay(1000)
